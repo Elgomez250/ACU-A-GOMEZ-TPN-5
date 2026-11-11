@@ -1,0 +1,138 @@
+img {
+    transition: all 0.4s ease;
+    border-radius: 10px;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--celeste);
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+:root {
+    --azul-oscuro: #142b4a;
+    --azul: #24558a;
+    --celeste: #00ffff;
+    --blanco: #ffffff;
+    --gris: #eeeeee;
+    --negro: #222222;
+}
+
+body {
+    background-color: var(--gris);
+    color: var(--negro);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* ENCABEZADO */
+
+header {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* MENU */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--azul);
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 12px 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--azul-oscuro);
+    color: var(--celeste);
+    border-radius: 5px;
+}
+
+/* SECCIONES */
+
+section {
+    background-color: var(--blanco);
+    margin: 25px;
+    padding: 25px;
+    border: 2px solid var(--azul);
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--azul);
+    font-size: 26px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* IMAGENES */
+
+img {
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid var(--azul);
+    border-radius: 10px;
+}
+
+/* TARJETAS */
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 20px;
+    width: 220px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.tarjeta h3 {
+    color: var(--celeste);
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+/* PIE DE PAGINA */
+
+footer {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}

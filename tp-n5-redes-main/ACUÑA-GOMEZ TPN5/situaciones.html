@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Situaciones Problemáticas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>SITUACIONES PROBLEMÁTICAS</h1>
+        <p>Trabajo Práctico: Direcciones IP</p>
+        <nav>
+            <a href="inicio.html">INICIO</a>
+            <a href="situaciones.html">SITUACIONES</a>
+            <a href="imagenes.html">IMÁGENES</a>
+    </nav>
+    </header>
+
+    
+
+    <section>
+        <h2>Situación 1: ¿Pública o privada?</h2>
+        <p><b>Consigna:</b> Clasificar las seis direcciones como IP pública o privada.</p>
+        <p><b>Respuesta:</b></p>
+        <p>
+            192.168.0.15: privada.<br>
+            10.0.0.5: privada.<br>
+            200.45.130.12: pública.<br>
+            172.16.5.20: privada.<br>
+            8.8.8.8: pública.<br>
+            192.168.1.1: privada.
+        </p>
+        <p>Las IP privadas pertenecen a los rangos reservados para redes locales. Las públicas identifican una red ante internet.</p>
+    </section>
+
+    <section>
+        <h2>Situación 2: Dos casas, la misma dirección</h2>
+        <p><b>Consigna:</b> Explicar por qué no hay conflicto entre ambos dispositivos.</p>
+        <p><b>Respuesta:</b></p>
+        <p>
+            No hay conflicto porque 192.168.1.5 es una IP privada.
+            Cada dirección funciona solamente dentro de su propia red local.
+            Los routers utilizan NAT para conectar esas redes con internet
+            mediante sus respectivas IP públicas.
+        </p>
+    </section>
+
+    <section>
+        <h2>Situación 3: ¿A qué clase pertenece?</h2>
+        <p><b>Consigna:</b> Indicar a qué clase pertenece cada dirección y su máscara por defecto.</p>
+        <p><b>Respuesta:</b></p>
+        <p>
+            10.4.5.6: Clase A. Máscara 255.0.0.0.<br>
+            172.20.14.3: Clase B. Máscara 255.255.0.0.<br>
+            192.168.50.2: Clase C. Máscara 255.255.255.0.
+        </p>
+        <p>La clase se identifica observando el primer número de la dirección IP.</p>
+    </section>
+
+    <section>
+        <h2>Situación 4: El servidor que no puede cambiar de dirección</h2>
+        <p><b>Consigna:</b> Indicar qué tipo de IP conviene para el servidor y para las notebooks, y nombrar el protocolo de asignación automática.</p>
+        <p><b>Respuesta:</b></p>
+        <p>
+            Al servidor le conviene una IP estática porque necesita mantener
+            siempre la misma dirección. A las notebooks les conviene una IP
+            dinámica, que se asigna automáticamente mediante el protocolo DHCP.
+        </p>
+    </section>
+
+    <section>
+        <h2>Situación 5: Se están por acabar las direcciones</h2>
+        <p><b>Consigna:</b> Explicar cómo pueden seguir conectándose dispositivos usando IP pública, privada y NAT.</p>
+        <p><b>Respuesta:</b></p>
+        <p>
+            Los dispositivos utilizan IP privadas dentro de las redes locales.
+            El router, mediante NAT, permite que muchos dispositivos compartan
+            una sola IP pública para conectarse a internet. De esta manera,
+            se aprovechan mejor las direcciones IPv4 disponibles.
+        </p>
+    </section>
+
+    <section>
+        <h2>Situación 6: La casa que se pasa a IPv6</h2>
+        <p><b>Consigna:</b> Explicar las diferencias entre IPv4 e IPv6 y por qué IPv6 resuelve el problema de agotamiento.</p>
+        <p><b>Respuesta:</b></p>
+        <p>
+            IPv4 utiliza 32 bits y se escribe con cuatro números separados
+            por puntos. IPv6 utiliza 128 bits y se escribe con números y
+            letras separados por dos puntos. IPv6 permite una cantidad
+            muchísimo mayor de direcciones, por eso soluciona el problema
+            de agotamiento de IPv4.
+        </p>
+    </section>
+
+    <section>
+        <h2>Situación 7: Probar la red sin estar conectado</h2>
+        <p><b>Consigna:</b> Indicar qué dirección especial puede utilizar, a qué dispositivo hace referencia y por qué no necesita conexión.</p>
+        <p><b>Respuesta:</b></p>
+        <p>
+            Puede utilizar la dirección 127.0.0.1, llamada Loopback.
+            Esta dirección hace referencia a la propia computadora y permite
+            comprobar si funciona correctamente el software de red sin
+            conectarse a internet ni a una red física.
+        </p>
+    </section>
+
+    <section>
+        <h2>Situación 8: Todo bien adentro, nada afuera</h2>
+        <p><b>Consigna:</b> Explicar para qué sirve la puerta de enlace y qué dispositivo debe tener configurada su dirección.</p>
+        <p><b>Respuesta:</b></p>
+        <p>
+            La puerta de enlace es la dirección IP del router y funciona como
+            salida hacia otras redes o internet. Si está mal configurada,
+            la computadora puede comunicarse con los dispositivos de su red
+            local, pero no puede acceder a internet. Por eso debe tener
+            configurada correctamente la dirección del router.
+        </p>
+    </section>
+
+    <section>
+        <h2>Situación 9: Misma red, redes distintas</h2>
+        <p><b>Consigna:</b> Explicar por qué A y B pueden comunicarse directamente, mientras que para comunicarse con C necesitan un router.</p>
+        <p><b>Respuesta:</b></p>
+        <p>
+            Las PC A y B pertenecen a la misma red porque sus direcciones
+            comparten la parte de red 192.168.1 y tienen la misma máscara.
+            En cambio, la PC C pertenece a otra red porque su parte de red
+            es 192.168.2. Por eso necesitan un router para comunicarse.
+        </p>
+    </section>
+
+    <section>
+        <h2>Situación 10: Diagnóstico integral de la oficina</h2>
+        <p><b>Consigna:</b> Explicar qué tipo de IP tiene el servidor, qué IP recibe la notebook, qué función cumple el router y por qué necesita una IP pública.</p>
+        <p><b>Respuesta:</b></p>
+        <p>
+            El servidor tiene una IP estática porque necesita mantener
+            siempre la misma dirección. La notebook recibe una IP dinámica
+            mediante el protocolo DHCP. La dirección 192.168.1.1 es la IP
+            privada del router y funciona como puerta de enlace. Además,
+            el router necesita una IP pública asignada por el proveedor
+            de internet para conectar la red local con internet mediante NAT.
+        </p>
+    </section>
+
+    <nav>
+        <a href="inicio.html">VOLVER AL INICIO</a>
+    </nav>
+
+    <footer>
+        <p>Trabajo Práctico - Direcciones IP</p>
+         <p>4.º Año / CET 30 / Turno vespertino</p>
+        
+    </footer>
+</body>
+</html>
